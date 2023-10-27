@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meters To Inches</title>
+    <style>
+        body{
+            background-image: url(background.jpeg);
+            height: auto;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+        }
+        .container{
+            background-color:rgb(4, 18, 138);
+            border:5px solid skyblue;
+            width: 350px;
+            height: 250px;
+            margin-left: 450px;
+            color: white;
+            margin-top: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+        label{
+            color: white;
+            font-size: 20px;
+        }
+        input{
+            margin-top: 30px;
+            height: 30px;
+        }
+        button{
+            width: 70px;
+            height: 30px;
+            background-image: linear-gradient(to right, white, skyblue);
+        }
+        button:hover{
+            background-image: linear-gradient(to left, white,skyblue);
+        }
+    </style>
+</head>
+<body>
+    <h1>Meters To inches Converter</h1>
+    <div class="container">
+        <label>Enter the Meters(ms) here:</label>
+        <input type="text" placeholder="ms" id="m">
+        <br>
+        <h1 id="is"></h1>
+        <br>
+        <button type="button" id="btn" onclick="display()">Submit</button>
+    </div>
+    <script>
+        function display(){
+            let i= document.getElementById("m").value;
+            let j= i*39.26 + "inches";
+            let z= document.getElementById("is");
+            z.innerHTML=j;
+        }
+    </script>
+</body>
+</html>
